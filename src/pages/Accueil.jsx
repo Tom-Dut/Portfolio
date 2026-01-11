@@ -18,7 +18,7 @@ function Accueil() {
         Vous y trouverez :
       </p>
 
-      {/* Une liste des sections */}
+      {/* Sections */}
       <div className={styles.sectionsGrid}>
         <div className={styles.sectionItem}>
           <h3>🚀 Mes Projets</h3>

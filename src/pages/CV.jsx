@@ -10,9 +10,7 @@ function CV() {
   const [isOpen, setIsOpen] = useState(false);
   const [lang, setLang] = useState('fr'); // Par défaut en français
 
-  // LOGIQUE 
 
-  // Fonction pour changer de langue
   const toggleLang = () => {
     setLang(lang === 'fr' ? 'en' : 'fr');
   };
@@ -22,7 +20,6 @@ function CV() {
   const currentPdf = lang === 'fr' ? cvFrPdf : cvEnPdf;
   const currentTitle = lang === 'fr' ? "Version Française" : "English Version";
 
-  // RENDU
   return (
     <div className={styles.pageContainer}>
       <h1 className={styles.titre}>Mon Curriculum Vitae</h1>
@@ -42,7 +39,7 @@ function CV() {
           &lt; {/* Symbole < */}
         </button>
 
-        {/* L'image centrale (cliquable pour zoom) */}
+        {/* L'image centrale */}
         <div className={styles.apercuContainer} onClick={() => setIsOpen(true)}>
           <img src={currentImage} alt="CV Aperçu" className={styles.cvImageMini} />
         </div>

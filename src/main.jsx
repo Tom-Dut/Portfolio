@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Accueil from './pages/Accueil.jsx'
 import Projets from './pages/Projets.jsx'
+import Competences from './pages/Competence.jsx'
 import CV from './pages/CV.jsx'
 import './index.css' 
 import Contact from './pages/Contact.jsx'
@@ -27,6 +28,13 @@ const router = createHashRouter([
         path: "/projets", // Quand l'URL est /projets
         element: <Projets /> // On affiche le composant Projets
       },
+
+      {
+        path: "/competence", // Quand l'URL est /competence
+        element: <Competences /> // On affiche le composant Compétences
+      },
+
+
       {
         path: "/cv",      // Quand l'URL est /cv
         element: <CV />  // On affiche le composant CV

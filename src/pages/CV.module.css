@@ -17,7 +17,7 @@
 .apercuContainer {
   position: relative;
   display: inline-block;
-  cursor: pointer; /* Indique qu'on peut cliquer */
+  cursor: pointer; 
   border: 4px solid transparent;
   transition: all 0.3s ease;
   border-radius: 10px;
@@ -26,7 +26,7 @@
 
 .apercuContainer:hover {
   border-color: var(--couleur-primaire); /* Bordure bleue au survol */
-  transform: scale(1.02); /* Petit zoom */
+  transform: scale(1.02); 
   box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
 }
 
@@ -54,7 +54,7 @@
   opacity: 1;
 }
 
-/* Conteneur du Carrousel (Flèche + Image + Flèche) */
+/* Conteneur du Carrousel */
 .carouselContainer {
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@
   margin-top: 20px;
 }
 
-/* Le style de l'aperçu (Image) reste le même */
+/* Le style de l'aperçu reste le même */
 .apercuContainer {
   position: relative;
   display: inline-block;
@@ -86,14 +86,14 @@
   border-radius: 6px;
 }
 
-/* --- LES FLÈCHES --- */
+/*  LES FLÈCHES */
 .arrowButton {
   background: transparent;
   border: 2px solid var(--couleur-secondaire);
   color: var(--couleur-texte);
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Rond */
+  border-radius: 50%; 
   font-size: 1.5rem;
   cursor: pointer;
   display: flex;
@@ -109,7 +109,7 @@
   transform: scale(1.1);
 }
 
-/* Indicateur de langue (Français / English) */
+/* Indicateur de langue */
 .langIndicator {
   margin-bottom: 10px;
   font-size: 1.2rem;
@@ -143,12 +143,12 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9); /* Fond noir semi-transparent */
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000; /* Passe au-dessus de TOUT */
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; /* Cliquer n'importe où pour fermer */
+  cursor: pointer;
 }
 
 .modalContent {
@@ -156,7 +156,7 @@
   max-height: 90%;
   border-radius: 8px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-  cursor: default; /* Empêche la fermeture si on clique sur l'image elle-même */
+  cursor: default; /* Empêche la fermeture si on clique sur l'image */
 }
 
 .closeButton {

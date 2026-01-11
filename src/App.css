@@ -45,11 +45,16 @@
 
 .navbar {
   background-color: var(--couleur-surface); /* Devient gris foncé */
-  border-bottom: 1px solid #333; /* Une petite ligne subtile en bas */
+  border-bottom: 1px solid #333; /* Une ligne en bas */
   padding: 0.5rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  flex-wrap: wrap; 
+
+  height: auto; 
+  min-height: 80px; 
 }
 
 .nav-links {
@@ -58,7 +63,7 @@
 }
 
 .navbar a {
-  color: var(--couleur-texte); /* Le texte des liens devient blanc */
+  color: var(--couleur-texte); /* Le texte des liens blanc */
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;

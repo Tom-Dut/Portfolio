@@ -1,9 +1,37 @@
 import styles from './Contact.module.css';
 
 function Contact() {
+
+  const contacts = [
+    {
+      icon: "📧",
+      titre: "Email Personnel",
+      texte: "tomdut3@gmail.com",
+      lien: "mailto:tomdut3@gmail.com"
+    },
+    {
+      icon: "🎓", 
+      titre: "Email Universitaire",
+      texte: "tom_dutkiewicz@ens.univ-artois.fr",
+      lien: "mailto:tom_dutkiewicz@ens.univ-artois.fr"
+    },
+    {
+      icon: "💼", 
+      titre: "LinkedIn",
+      texte: "linkedin.com/in/tom-dutkiewicz",
+      lien: "https://www.linkedin.com/in/tom-dutkiewicz/"
+    },
+    {
+      icon: "💻", 
+      titre: "GitHub",
+      texte: "github.com/Tom-Dut",
+      lien: "https://github.com/Tom-Dut"
+    }
+  ];
+
   return (
     <div className={styles.pageContainer}>
-      <h1 className={styles.titre}>Me Contacter</h1>
+      <h1 className={styles.grandTitre}>Me Contacter 📬</h1>
       
       <p className={styles.intro}>
         N'hésitez pas à me contacter pour une opportunité de stage, 
@@ -11,37 +39,26 @@ function Contact() {
       </p>
 
       <div className={styles.contactGrid}>
-        
-        {/* Mail */}
-        <a href="mailto:tomdut3@gmail.com" className={styles.contactCard}>
-          📧 Envoyer un mail sur mon adresse personnelle 
-        </a>
+        {contacts.map((info, index) => (
+          <a 
+            key={index} 
+            href={info.lien} 
+            target="_blank" 
+            rel="noreferrer" 
+            className={styles.contactCard}
+          >
+            {/* L'icône à gauche */}
+            <div className={styles.iconBox}>
+              {info.icon}
+            </div>
 
-        {/* Mail Universitaire*/}
-        <a href="mailto:tom_dutkiewicz@ens.univ-artois.fr" className={styles.contactCard}>
-          📧 Envoyer un mail sur mon adresse universitaire
-        </a>
-
-        {/* LinkedIn */}
-        <a 
-          href="https://www.linkedin.com/in/tom-dutkiewicz/" 
-          target="_blank" // target permet d'ouvrir dans un nouvel onglet
-          rel="noreferrer" // Pour des raisons de sécurité
-          className={styles.contactCard}
-        >
-          💼 Mon LinkedIn
-        </a>
-
-        {/* GitHub */}
-        <a 
-          href="https://github.com/existePasEncore" 
-          target="_blank" 
-          rel="noreferrer" 
-          className={styles.contactCard}
-        >
-          💻 Mon GitHub
-        </a>
-
+            {/* Le texte à droite */}
+            <div className={styles.infoBox}>
+              <span className={styles.titreCard}>{info.titre}</span>
+              <span className={styles.texteVisible}>{info.texte}</span>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   )

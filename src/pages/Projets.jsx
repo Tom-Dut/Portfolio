@@ -1,5 +1,5 @@
 import styles from './Projets.module.css';
-import { mesProjets } from '../data/projets'; // On importe ta liste
+import { mesProjets } from '../data/projets';
 import { Link } from 'react-router-dom';
 
 function Projets() {
@@ -22,7 +22,7 @@ function Projets() {
               {projet.image ? (
                 <img src={projet.image} alt={projet.titre} className={styles.projectImg} />
               ) : (
-                <span style={{fontSize: '3rem'}}>🚀</span> // Emoji par défaut
+                <span style={{fontSize: '3rem'}}>🚀</span>
               )}
             </div>
 

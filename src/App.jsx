@@ -1,6 +1,5 @@
-// Dans : src/App.jsx
 import { Outlet, Link } from 'react-router-dom'
-import './App.css' // On s'assure que ce fichier est importé
+import './App.css' 
 
 import logoImg from './assets/logo.png';
 
@@ -16,6 +15,7 @@ function App() {
 
         <div className="nav-links">
             <Link to="/projets">Projets</Link>
+            <Link to="/competence">Compétences</Link>
             <Link to="/cv">Mon CV</Link>
             <Link to="/contact">Contact</Link>
         </div>
