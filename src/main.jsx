@@ -2,7 +2,6 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
 import Accueil from './pages/Accueil.jsx'
@@ -12,8 +11,10 @@ import './index.css'
 import Contact from './pages/Contact.jsx'
 import ProjetDetail from './pages/ProjetDetail.jsx';
 
-// route
-const router = createBrowserRouter([
+import { createHashRouter, RouterProvider } from 'react-router-dom'
+
+// router
+const router = createHashRouter([
   {
     path: "/",         // L'URL de base
     element: <App />,  // Le composant "cadre" qui contient tout
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
 
       { path: "/projet/:id", element: <ProjetDetail /> }
     ]
-  }
+  },
 ]);
 
 
