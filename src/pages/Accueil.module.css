@@ -1,0 +1,58 @@
+
+.pageContainer {
+  background-color: var(--couleur-surface); /* La carte devient gris foncé */
+  padding: 50px;
+  border-radius: 15px;
+  /* On ajuste l'ombre pour qu'elle soit visible sur le noir  */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  border: 1px solid #333; /* Une bordure fine pour définir la carte */
+}
+
+.titre {
+  color: var(--couleur-primaire); /* Bleu néon */
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.pageContainer p {
+    font-size: 1.2rem;
+    color: var(--couleur-secondaire); /* Gris clair */
+}
+
+.bouton {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px; 
+  
+  /* On force la couleur CYAN pour le texte */
+  color: var(--couleur-primaire) !important; 
+  
+  border: 2px solid var(--couleur-primaire);
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase; /* Met le texte en majuscules */
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  
+  background-color: rgba(97, 218, 251, 0.1); 
+}
+
+.bouton:hover {
+  background-color: var(--couleur-primaire);
+  color: #121212 !important; /* important car le texte doit rester lisible */
+  box-shadow: 0 0 20px var(--couleur-primaire); /*  effet néon */
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.sectionsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}

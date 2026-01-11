@@ -1,0 +1,179 @@
+.pageContainer {
+  padding: 40px;
+  max-width: 1000px; 
+  margin: 0 auto;
+  color: var(--couleur-texte);
+}
+
+.backBtn {
+  display: inline-block;
+  color: var(--couleur-secondaire);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.backBtn:hover {
+  color: var(--couleur-primaire);
+  text-decoration: underline;
+}
+
+.titre {
+  font-size: 3rem;
+  color: var(--couleur-primaire);
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.contentGrid {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap; 
+}
+
+.imageBox {
+  flex: 1;
+  min-width: 300px;
+}
+
+.imgGrand {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border: 1px solid #333;
+  cursor: pointer;
+  
+}
+
+.imgGrand:hover {
+  transform: scale(1.03);
+  border-color: var(--couleur-primaire);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.placeholder {
+  font-size: 5rem;
+  text-align: center;
+  background: #222;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.infoBox {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tag {
+  background: rgba(97, 218, 251, 0.1);
+  color: var(--couleur-primaire);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.githubBtn {
+  display: inline-block;
+  background-color: var(--couleur-primaire);
+  color: #121212;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.2s;
+}
+
+.githubBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--couleur-primaire);
+}
+
+.galerieSection {
+  margin-top: 4rem;
+  border-top: 1px solid #333;
+  padding-top: 2rem;
+}
+
+.galerieSection h3 {
+  color: var(--couleur-primaire);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.galerieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.galerieImg {
+  width: 100%;
+  height: 400px; 
+  object-fit: contain; 
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Petit effet zoom sympa au survol */
+.galerieImg:hover {
+  transform: scale(1.03);
+  border-color: var(--couleur-primaire);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.modalOverlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+  cursor: zoom-out; 
+  animation: fadeIn 0.3s ease;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modalImg {
+  max-width: 90vw;  
+  max-height: 90vh; 
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  display: block;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Petite animation d'apparition */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
