@@ -4,17 +4,20 @@ import { traduction } from '../data/traduction';
 // On crée le contexte
 const LangueContext = createContext();
 
-// On crée le composant qui va englober ton site
+// composant qui va englober le site
 export function LangueProvider({ children }) {
   const [language, setLanguage] = useState('fr'); // Français par défaut
 
-  const toggleLangue = () => {
-    setLanguage((prev) => (prev === 'fr' ? 'en' : 'fr'));
+  const changeLanguage = (newLang) => {
+    // On verifie que la langue existe
+    if (traduction[newLang]) {
+      setLanguage(newLang);
+    }
   };
 
   // On renvoie : la langue actuelle, la fonction pour changer, et les textes (t)
   return (
-    <LangueContext.Provider value={{ language, toggleLangue, t: traduction[language] }}>
+    <LangueContext.Provider value={{ language, changeLanguage, t: traduction[language] }}>
       {children}
     </LangueContext.Provider>
   );

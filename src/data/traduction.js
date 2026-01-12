@@ -162,5 +162,87 @@ export const traduction = {
                 description: "My portfolio containing different projects that I have completed. It also includes ways to contact me and my CV.",
             }
         }
+    },
+
+    es: {
+        navbar: {
+            accueil: "Inicio",
+            projets: "Proyectos",
+            competences: "Habilidades",
+            cv: "Mi CV",
+            contact: "Contacto"
+        },
+        accueil: {
+            titre : "Hola, soy Tom Dutkiewicz",
+            intro: "Estudiante de segundo año en Informática, quiero continuar mis estudios en este campo para trabajar en TI.",
+            react: "Este portafolio fue creado con React para mostrar mi trabajo. Encontrarás:",
+            projet: "🚀 Mis Proyectos",
+            accrocheProjet: "Descubre las aplicaciones y sitios web que he desarrollado.",
+            clickProjet: "Ver mis proyectos",
+            parcour: "📄 Mi Trayectoria",
+            accrocheParcours: "Consulta mi CV, habilidades y experiencias.",
+            clickParcours: "Ver mi CV",
+            contact: "📬 Contáctame",
+            accrocheContact: "¿Una oportunidad o una pregunta? ¡Escríbeme!",
+            clickContact: "Contáctame"
+        },
+        competences: {
+            titre: "Mis Habilidades 🛠️",
+            intro: "Estas son las tecnologías y herramientas que utilizo a diario.",
+            titreLangages: "💻 Lenguajes & Frameworks",
+            titreOutils: "⚙️ Herramientas & Entornos",
+            personnel: "personal"
+        },
+        contact: {
+            titre: "Contáctame 📬",
+            intro: "¡No dudes en contactarme para una oportunidad de prácticas, un programa de trabajo-estudio o simplemente para charlar!",
+            emailPerso: "Correo Electrónico Personal",
+            emailUni: "Correo Electrónico Universitario",
+            linkedin: "Mi LinkedIn",
+            github: "Mi GitHub"
+        },
+        projets: {
+            titre: "Mis Proyectos",
+            savoir: "Saber más"
+        },
+        projetsDetail: {
+            retour: "← Volver a proyectos",
+            gitHUb: "Ver código en GitHub 🔗",
+            description: "Descripción",
+            techno: "Tecnologías : ",
+            plusImage: "📸 Más imágenes"
+        },
+        cv: {
+            titre: "Mi Currículum Vitae",
+            explication: "Utiliza las flechas para cambiar de idioma",
+            telecharger: "Descargar"
+        },
+
+        detailsProjets: {
+            projet_1: {
+                titre: "LenSynphony",
+                description: "Sitio web codificado en PHP simulando un sitio con partituras y arreglos que se pueden eliminar, agregar, modificar y observar. También tiene un sistema de roles.",
+            },
+            projet_2: {
+                titre: "Site Bollywood",
+                description: "Sitio sobre el tema de Bollywood codificado en PHP realizado en 2 días con un grupo de trabajo aleatorio. Permite escuchar música, darles me gusta y seguir a otros usuarios. Hay un sistema de recomendaciones. Puedes crear, modificar, eliminar y mostrar películas.",
+            },
+            projet_3: {
+                titre: "PacMan",
+                description: "Juego de PacMan codificado en Java. Los fantasmas están codificados de acuerdo a sus personalidades y el juego tiene las diferentes características de PacMan como MegaPacGommes o frutas.",
+            },
+            projet_4: {
+                titre : "QuizzCocktail",
+                description: "Aplicación web de cuestionarios sobre cócteles, donde los usuarios pueden probar sus conocimientos sobre mixología."
+            },
+            projet_5: {
+                titre : "Bomberman",
+                description: "Juego de Bomberman codificado en Java. Los jugadores pueden colocar bombas y destruir bloques para encontrar power-ups y eliminar a sus oponentes."
+            },
+            projet_6: {
+                titre : "Portfolio",
+                description: "Mi portafolio que contiene diferentes proyectos que he completado. También incluye formas de contactarme y mi CV."
+            }
+        }
     }
-};
+}

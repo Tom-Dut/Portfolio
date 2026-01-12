@@ -7,7 +7,7 @@ import logoImg from './assets/logo.png';
 
 function App() {
 
-  const { language, toggleLangue, t } = useLangue();
+  const { language, changeLanguage, t } = useLangue();
 
   return (
     <div className="app-container">
@@ -25,21 +25,57 @@ function App() {
             <Link to="/contact">{t.navbar.contact}</Link>
 
 
-        <button 
-          onClick={toggleLangue} 
-          style={{
-            marginLeft: '20px', 
-            padding: '5px 10px', 
-            cursor: 'pointer',
-            fontSize: '1.2rem',
-            background: 'transparent',
-            border: '1px solid white',
-            color: 'white',
-            borderRadius: '5px'
-          }}
-        >
-          {language === 'fr' ? '🇬🇧 EN' : '🇫🇷 FR'}
-        </button>
+        <div style={{ marginLeft: '20px', display: 'flex', gap: '10px' }}>
+              
+              {/* Bouton FR */}
+              <button 
+                onClick={() => changeLanguage('fr')} 
+                style={{
+                  cursor: 'pointer',
+                  background: 'transparent',
+                  border: 'none',
+                  fontSize: '1.5rem',
+                  opacity: language === 'fr' ? 1 : 0.5, 
+                  transition: '0.3s'
+                }}
+                title="Français"
+              >
+                🇫🇷
+              </button>
+
+              {/* Bouton EN */}
+              <button 
+                onClick={() => changeLanguage('en')} 
+                style={{
+                  cursor: 'pointer',
+                  background: 'transparent',
+                  border: 'none',
+                  fontSize: '1.5rem',
+                  opacity: language === 'en' ? 1 : 0.5,
+                  transition: '0.3s'
+                }}
+                title="English"
+              >
+                🇬🇧
+              </button>
+
+              {/* Bouton ES*/}
+              <button 
+                onClick={() => changeLanguage('es')} 
+                style={{
+                  cursor: 'pointer',
+                  background: 'transparent',
+                  border: 'none',
+                  fontSize: '1.5rem',
+                  opacity: language === 'es' ? 1 : 0.5,
+                  transition: '0.3s'
+                }}
+                title="Español"
+              >
+                🇪🇸
+              </button>
+
+            </div>
 
         </div>
       </nav>
