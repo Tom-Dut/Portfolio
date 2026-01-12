@@ -2,16 +2,21 @@ import styles from './Competence.module.css';
 import { FaJava, FaPhp, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaPython } from 'react-icons/fa'; 
 import { SiJavascript, SiMysql, SiIntellijidea, SiPhpstorm, SiPycharm, SiLaravel } from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
+import { useLangue } from '../context/LangueContext';
+
+
 
 function Competences() {
+
+  const { t } = useLangue();
 
   const langages = [
     { nom: "Java", icon: <FaJava /> },
     { nom: "Python", icon: <FaPython /> },
     { nom: "PHP", icon: <FaPhp /> },
     { nom: "Laravel", icon: <SiLaravel /> },
-    { nom: "JavaScript (personnel)", icon: <SiJavascript /> },
-    { nom: "React (personnel)", icon: <FaReact /> },
+    { nom: `JavaScript (${t.competences.personnel})`, icon: <SiJavascript /> },
+    { nom: `React (${t.competences.personnel})`, icon: <FaReact /> },
     { nom: "HTML5", icon: <FaHtml5 /> },
     { nom: "CSS3", icon: <FaCss3Alt /> },
     { nom: "SQL", icon: <SiMysql /> },
@@ -28,13 +33,13 @@ function Competences() {
 
   return (
     <div className={styles.pageContainer}>
-      <h1 className={styles.title}>Mes Compétences 🛠️</h1>
+      <h1 className={styles.title}>{t.competences.titre}</h1>
       <p className={styles.intro}>
-        Voici les technologies et outils que j'utilise au quotidien pour réaliser mes projets.
+        {t.competences.intro}
       </p>
 
       {/* Section 1 : Langages */}
-      <h2 className={styles.categoryTitle}>💻 Langages & Frameworks</h2>
+      <h2 className={styles.categoryTitle}>{t.competences.titreLangages}</h2>
       <div className={styles.grid}>
         {langages.map((skill, index) => (
           <div key={index} className={styles.card}>
@@ -45,7 +50,7 @@ function Competences() {
       </div>
 
       {/* Section 2 : Outils */}
-      <h2 className={styles.categoryTitle}>⚙️ Outils & Environnements</h2>
+      <h2 className={styles.categoryTitle}>{t.competences.titreOutils}</h2>
       <div className={styles.grid}>
         {outils.map((tool, index) => (
           <div key={index} className={styles.card}>

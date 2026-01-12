@@ -5,6 +5,8 @@ import cvFrImg from '../assets/cv-fr.png';
 import cvFrPdf from '../assets/cv-fr.pdf';
 import cvEnImg from '../assets/cv-en.png';
 import cvEnPdf from '../assets/cv-en.pdf';
+import { useLangue } from '../context/LangueContext';
+
 
 function CV() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,13 +22,15 @@ function CV() {
   const currentPdf = lang === 'fr' ? cvFrPdf : cvEnPdf;
   const currentTitle = lang === 'fr' ? "Version Française" : "English Version";
 
+  const { t } = useLangue();
+
   return (
     <div className={styles.pageContainer}>
-      <h1 className={styles.titre}>Mon Curriculum Vitae</h1>
-      
+      <h1 className={styles.titre}>{t.cv.titre}</h1>
+
       {/* Petit texte explicatif */}
       <p style={{color: '#ccc', marginBottom: '1rem'}}>
-        Utilisez les flèches pour changer de langue
+        {t.cv.explication}
       </p>
 
       {/* LE CARROUSEL  */}
@@ -59,7 +63,7 @@ function CV() {
         download={lang === 'fr' ? "CV_Tom_FR.pdf" : "CV_Tom_EN.pdf"} 
         className={styles.btnDownload}
       >
-        📥 Télécharger ({lang === 'fr' ? 'FR' : 'EN'})
+        📥 {t.cv.telecharger} ({lang === 'fr' ? 'FR' : 'EN'})
       </a>
 
       {/*  (ZOOM) */}

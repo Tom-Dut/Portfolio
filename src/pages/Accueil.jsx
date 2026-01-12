@@ -1,42 +1,46 @@
 import { Link } from 'react-router-dom'; //Pour faire des boutons
 import styles from './Accueil.module.css';
+import { useLangue } from '../context/LangueContext';
 
 function Accueil() {
+
+  const { t } = useLangue();
+
   return (
     <div className={styles.pageContainer}>
       
       {/* Titre */}
-      <h1 className={styles.titre}>Bonjour, je me nomme Dutkiewicz Tom</h1>
-      
+      <h1 className={styles.titre}>{t.accueil.titre}</h1>
+
       {/* présentation */}
       <p className={styles.presentation}>
-        Étudiant en 2ème année de <strong>BUT Informatique</strong>, je souhaite continuer mes études dans cette voie pour travailler dans les metiers de l'Informatique
+        {t.accueil.intro}
       </p>
       
       <p className={styles.description}>
-        Ce portfolio a été créé avec <strong>React</strong> pour présenter mon travail.
-        Vous y trouverez :
+        {t.accueil.react}
       </p>
+    
 
       {/* Sections */}
       <div className={styles.sectionsGrid}>
         <div className={styles.sectionItem}>
-          <h3>🚀 Mes Projets</h3>
-          <p>Découvrez les applications et sites web que j'ai développés.</p>
-          <Link to="/projets" className={styles.bouton}>Voir mes projets</Link>
+          <h3>{t.accueil.projet}</h3>
+          <p>{t.accueil.accrocheProjet}</p>
+          <Link to="/projets" className={styles.bouton}>{t.accueil.clickProjet}</Link>
         </div>
 
         <div className={styles.sectionItem}>
-          <h3>📄 Mon Parcours</h3>
-          <p>Consultez mon CV, mes compétences et mes expériences.</p>
-          <Link to="/cv" className={styles.bouton}>Voir mon CV</Link>
+          <h3>{t.accueil.parcour}</h3>
+          <p>{t.accueil.accrocheParcours}</p>
+          <Link to="/cv" className={styles.bouton}>{t.accueil.clickParcours}</Link>
         </div>
 
       {/* Contact*/}
         <div className={styles.sectionItem}>
-          <h3>📬 Me Contacter</h3>
-          <p>Une opportunité ou une question ? Écrivez-moi !</p>
-          <Link to="/contact" className={styles.bouton}>Me contacter</Link>
+          <h3>{t.accueil.contact}</h3>
+          <p>{t.accueil.accrocheContact}</p>
+          <Link to="/contact" className={styles.bouton}>{t.accueil.clickContact}</Link>
         </div>
 
 

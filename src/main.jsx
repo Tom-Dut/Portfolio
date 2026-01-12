@@ -6,11 +6,13 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Accueil from './pages/Accueil.jsx'
 import Projets from './pages/Projets.jsx'
-import Competences from './pages/Competence.jsx'
+import Competence from './pages/Competence.jsx'
 import CV from './pages/CV.jsx'
 import './index.css' 
 import Contact from './pages/Contact.jsx'
 import ProjetDetail from './pages/ProjetDetail.jsx';
+
+import { LangueProvider } from './context/LangueContext.jsx'; 
 
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 
@@ -31,7 +33,7 @@ const router = createHashRouter([
 
       {
         path: "/competence", // Quand l'URL est /competence
-        element: <Competences /> // On affiche le composant Compétences
+        element: <Competence /> // On affiche le composant Compétence
       },
 
 
@@ -50,6 +52,8 @@ const router = createHashRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} /> 
+    <LangueProvider>
+      <RouterProvider router={router} />
+    </LangueProvider>
   </React.StrictMode>,
 )
