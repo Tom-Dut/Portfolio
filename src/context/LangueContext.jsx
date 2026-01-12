@@ -1,11 +1,10 @@
-// src/context/LangueContext.jsx
 import { createContext, useState, useContext } from 'react';
 import { traduction } from '../data/traduction';
 
-// 1. On crée le contexte
+// On crée le contexte
 const LangueContext = createContext();
 
-// 2. On crée le composant qui va englober ton site
+// On crée le composant qui va englober ton site
 export function LangueProvider({ children }) {
   const [language, setLanguage] = useState('fr'); // Français par défaut
 
@@ -21,5 +20,5 @@ export function LangueProvider({ children }) {
   );
 }
 
-// 3. Un petit raccourci pour utiliser le contexte facilement
+// raccourci pour utiliser le contexte facilement
 export const useLangue = () => useContext(LangueContext);
